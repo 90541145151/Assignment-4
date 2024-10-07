@@ -1,0 +1,72 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+  }
+  
+  .header {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 960px;
+  }
+  
+  /* Title Styles */
+  .title h1 {
+    margin: 0;
+    color: #333;
+    font-size: 2.5em;
+  }
+  
+  .title h4 {
+    margin: 5px 0 20px;
+    color: #666;
+    font-size: 1.2em;
+  }
+  
+  /* Images Styles for Different Viewport Sizes */
+  
+  /* Small Viewport (Below 480px) - Image displayed in a smaller size */
+  @media (max-width: 479px) {
+    .header img {
+      width: 100%; /* Images take up the full width of the container */
+      height: auto; /* Maintain the aspect ratio */
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  /* Medium Viewport (480px - 959px) - Image displayed in a larger landscape */
+  @media (min-width: 480px) and (max-width: 959px) {
+    .header img {
+      width: 90%; /* Images take up most of the container width */
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  /* Large Viewport (960px and Above) - Images displayed side by side */
+  @media (min-width: 960px) {
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header img {
+      width: 45%; /* Each image takes almost half of the container width */
+      height: auto;
+      margin: 1%; /* Add some space between the images */
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
